@@ -5,79 +5,79 @@
         "title": "titulo 0",
         "category": "ing-sistemas",
         "description": "\n\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit.\n\t\t\t\t\t\t\tAnimi labore quis tempore necessitatibus? Minus soluta eaque facilis nobis at, odit,\n\t\t\t\t\t\t\tdignissimos facere, repellendus pariatur delectus nemo nisi, alias perferendis minima. 0\n\t\t\t\t\t\t",
-        "owner": "00c2a283-2484-47fe-b612-2ba22e320ceb",
+        "owner": "af75a195-b6ff-4e68-9fde-7be36f59eb1a",
         "id": null,
-        "createdAt": "2016-04-13T01:03:25.717Z",
-        "updatedAt": "2016-04-13T01:03:25.717Z"
+        "createdAt": "2016-04-13T02:29:05.433Z",
+        "updatedAt": "2016-04-13T02:29:05.433Z"
       },
       {
         "title": "titulo 1",
         "category": "ing-sistemas",
         "description": "\n\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit.\n\t\t\t\t\t\t\tAnimi labore quis tempore necessitatibus? Minus soluta eaque facilis nobis at, odit,\n\t\t\t\t\t\t\tdignissimos facere, repellendus pariatur delectus nemo nisi, alias perferendis minima. 1\n\t\t\t\t\t\t",
-        "owner": "0613d003-3e86-4efe-8068-abbbd172c4b1",
+        "owner": "7607e8cb-bcfb-414e-b391-5255507c7f43",
         "id": null,
-        "createdAt": "2016-04-13T01:03:25.842Z",
-        "updatedAt": "2016-04-13T01:03:25.842Z"
+        "createdAt": "2016-04-13T02:29:05.647Z",
+        "updatedAt": "2016-04-13T02:29:05.647Z"
       },
       {
         "title": "titulo 2",
         "category": "ing-sistemas",
         "description": "\n\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit.\n\t\t\t\t\t\t\tAnimi labore quis tempore necessitatibus? Minus soluta eaque facilis nobis at, odit,\n\t\t\t\t\t\t\tdignissimos facere, repellendus pariatur delectus nemo nisi, alias perferendis minima. 2\n\t\t\t\t\t\t",
-        "owner": "898c0e47-542c-432e-b145-894d703e2659",
+        "owner": "eac68a68-5580-4945-9d11-08d43f5188c8",
         "id": null,
-        "createdAt": "2016-04-13T01:03:25.998Z",
-        "updatedAt": "2016-04-13T01:03:25.998Z"
+        "createdAt": "2016-04-13T02:29:05.733Z",
+        "updatedAt": "2016-04-13T02:29:05.733Z"
       },
       {
         "title": "titulo 3",
         "category": "ing-sistemas",
         "description": "\n\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit.\n\t\t\t\t\t\t\tAnimi labore quis tempore necessitatibus? Minus soluta eaque facilis nobis at, odit,\n\t\t\t\t\t\t\tdignissimos facere, repellendus pariatur delectus nemo nisi, alias perferendis minima. 3\n\t\t\t\t\t\t",
-        "owner": "b9af8259-be74-4735-a093-fcef157ae23f",
+        "owner": "4194992c-e6ce-4517-9dbc-87d1ca07a62f",
         "id": null,
-        "createdAt": "2016-04-13T01:03:26.014Z",
-        "updatedAt": "2016-04-13T01:03:26.014Z"
+        "createdAt": "2016-04-13T02:29:05.736Z",
+        "updatedAt": "2016-04-13T02:29:05.736Z"
       }
     ],
     "user": [
       {
-        "password": "$2a$10$SoWkpwgcpn.v4ACGf2EQz.XTS.aLV7d1W45XHYG1N4TSk2Iw6T7Ni",
+        "password": "$2a$10$6TO0SLoDdLZApWqTQh/VruUGUx9Ya8bj/IpuQrNn0d0WVOALXdeYK",
         "username": "few",
-        "cc": "2323",
-        "id": "00c2a283-2484-47fe-b612-2ba22e320ceb",
+        "cc": "122232",
+        "id": "af75a195-b6ff-4e68-9fde-7be36f59eb1a",
         "photo": null,
         "thumbnails": null,
-        "createdAt": "2016-04-13T01:03:25.998Z",
-        "updatedAt": "2016-04-13T01:03:25.998Z"
+        "createdAt": "2016-04-13T02:29:05.728Z",
+        "updatedAt": "2016-04-13T02:29:05.728Z"
       },
       {
-        "password": "$2a$10$4KERtNtVuXs10qWvLzfhZ.Ugeh9/RaJfYiWZweicc4r//D0GCoSKm",
+        "password": "$2a$10$acS8J7m14cJUlcr3GzzEdepQB6A7s63b39wk/FRnekUhEGAFYqpya",
         "username": "esneyder",
         "cc": "1077470550",
-        "id": "0613d003-3e86-4efe-8068-abbbd172c4b1",
+        "id": "7607e8cb-bcfb-414e-b391-5255507c7f43",
         "photo": null,
         "thumbnails": null,
-        "createdAt": "2016-04-13T01:03:26.279Z",
-        "updatedAt": "2016-04-13T01:03:26.279Z"
+        "createdAt": "2016-04-13T02:29:05.999Z",
+        "updatedAt": "2016-04-13T02:29:05.999Z"
       },
       {
-        "password": "$2a$10$e5ETZgjP8058lvvu2tkeZ.ETZsVGDst7LCHGdcSWFqzmfNSonF0L2",
+        "password": "$2a$10$dH2pWX9I2Wp1sjyZ3.CVk.e0I6SBgV1doGWqB7LhGHzmDHYdFX8rm",
         "username": "few2",
-        "cc": "2323",
-        "id": "898c0e47-542c-432e-b145-894d703e2659",
+        "cc": "232323",
+        "id": "eac68a68-5580-4945-9d11-08d43f5188c8",
         "photo": null,
         "thumbnails": null,
-        "createdAt": "2016-04-13T01:03:26.575Z",
-        "updatedAt": "2016-04-13T01:03:26.575Z"
+        "createdAt": "2016-04-13T02:29:06.267Z",
+        "updatedAt": "2016-04-13T02:29:06.267Z"
       },
       {
-        "password": "$2a$10$MW.Ox.5uBNCfT35zyxUV.ebF5Sjj9nUr/M33ElP1Df4E.a8XMvkHa",
+        "password": "$2a$10$faI4gKbwnacLY4R4R6/9euzDND/4BIs.yp39dLW8y2I8Ln4bChu6m",
         "username": "esneyder2",
-        "cc": "1077470550",
-        "id": "b9af8259-be74-4735-a093-fcef157ae23f",
+        "cc": "10774750",
+        "id": "4194992c-e6ce-4517-9dbc-87d1ca07a62f",
         "photo": null,
         "thumbnails": null,
-        "createdAt": "2016-04-13T01:03:26.873Z",
-        "updatedAt": "2016-04-13T01:03:26.873Z"
+        "createdAt": "2016-04-13T02:29:06.536Z",
+        "updatedAt": "2016-04-13T02:29:06.536Z"
       }
     ]
   },
@@ -131,7 +131,8 @@
         "type": "boolean"
       },
       "cc": {
-        "type": "string"
+        "type": "string",
+        "unique": true
       },
       "password": {
         "type": "string"
