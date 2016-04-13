@@ -23,6 +23,9 @@ module.exports = {
 
   log: {
     level: "verbose"
-  }
-
+  },
+  models:{
+	  migrate: "drop"
+  },
+	hookTimeout: 120000
 };

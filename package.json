@@ -5,6 +5,7 @@
   "description": "a Sails application",
   "keywords": [],
   "dependencies": {
+    "bcryptjs": "^2.3.0",
     "gulp": "^3.9.1",
     "gulp-param": "^1.0.3",
     "gulp-watch": "^4.3.5",
@@ -12,7 +13,10 @@
     "include-all": "~0.1.6",
     "rc": "1.0.1",
     "sails": "~0.12.3",
-    "sails-disk": "~0.10.9"
+    "sails-disk": "~0.10.9",
+    "sails-fixtures": "^1.0.8",
+    "sails-hook-fixtures": "^0.11.9",
+    "underscore": "^1.8.3"
   },
   "scripts": {
     "debug": "node debug app.js",

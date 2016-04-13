@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <title>Login</title>
+    
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/Personalizado.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="utf-8"/>  
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+         <style>
+         
+             .mitad{
+                 width: 60%;
+                 margin-top: 10px;
+             }
+             a{
+                 color:gray;
+             }
+             
+         </style>
+	</head>
+<body>
+    <div align="center" class="container">
+    <div  class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6 borde" style="margin-top:60px">
+        <div class="col-md" style="margin-top:30px">
+            <img src="imagenes/avata.jpg">
+            </div>
+           <div style="margin-top:30px" class="col-md">
+            <input placeholder="Usuario" class="form-control mitad">
+            <input placeholder="Contraseña" class="form-control mitad">
+            <a href="#" data-toggle="modal" data-target="#olvide_mi_contraseña" style="margin-top:15px">Olvide mi contraseña</a>
+            <br>
+            <button onclick="location.href='index.html'" type="button" class="btn btn-default_foro mitad">Ingresar</button>
+             <br>
+            <br>
+            </div>
+            </div>
+        <div class="col-md-3"></div>
+        </div>
+    </div>
+    <br>
+    
+    <div id="olvide_mi_contraseña" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">X</button>
+            <h3 class="modal-title">Recuperar contraseña</h3>
+            </div>
+            <div class="modal-body">
+            <p>Para recuperar su contraseña escriba su correo y seleccione su programa</p>
+            <form class="form-line" role="form">
+                <div class="form-group">
+                <label>Correo</label>
+                <input type="text" class="form-control">
+                    
+                <div style="margin-top:5px" class="form-group">
+                    <select class="form-control_foro2">
+                    <option>Programas</option>
+                    <option>Antropologia</option>
+                    <option>Ing.Sistema</option>
+                    <option>Ing.Industrial</option>
+                    <option>Psicologia</option>
+                    <option>Teologia</option>
+                    <option>Tra.Social</option>
+                    </select>
+                    <button type="button" class="btn btn-default_foro">Restablecer</button>
+                    </div>
+                    
+                </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+        </div>
+    </div>
+    
+    
+    </body>
+</html>

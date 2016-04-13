@@ -32,7 +32,19 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  "/":"HomeController.serve"
+  "/v1/user":"UserController.get",
+
+  "/v1/post":"PostController.get",
+
+  "/":"HomeController.serve",
+
+  "/login":"LoginController.serve",
+
+  "/profile":"ProfileController.serve",
+
+  "/foro":"ForoController.serve",
+
+  "/gallery":"GalleryController.serve"
 
   /***************************************************************************
   *                                                                          *

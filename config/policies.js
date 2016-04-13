@@ -28,6 +28,27 @@ module.exports.policies = {
 
   // '*': true,
 
+  HomeController:{
+  	serve:["sessionAuth"]
+  },
+
+	ProfileController:{
+  	serve:["sessionAuth"]
+  },
+
+  ForoController:{
+  	serve:["sessionAuth"]
+  },
+
+  UserController:{
+  	get:["sessionAuth"]
+  },
+
+	PostController:{
+  	get:["sessionAuth"]
+  },
+
+
   /***************************************************************************
   *                                                                          *
   * Here's an example of mapping some policies to run before a controller    *

@@ -1,0 +1,157 @@
+body{
+	color:#666;
+	font-family: Arial;
+	    background: linear-gradient(to bottom, #68EACC 0%, #F9D401 0%, #FFFFFF 100%);
+}
+.container{
+	width: 800px;
+	height:1200px;
+	background-color: #FFF;
+	border:solid 2px #999;
+	margin: auto;
+	font-family: Arial;
+	padding: 20px;
+}
+.ventana
+{
+    
+    width: 100%;
+    height: 100%;
+    color: #FFF;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    background-image: url('../images/bg-modal.png');
+}
+.olvido
+{
+    
+    width: 100%;
+    height: 100%;
+    color: #FFF;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    background-image: url('../images/bg-modal.png');
+}
+.olvido1
+{
+    
+    width: 100%;
+    height: 100%;
+    color: #FFF;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    background-image: url('../images/bg-modal.png');
+}
+.olvido2
+{
+    
+    width: 100%;
+    height: 100%;
+    color: #FFF;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    background-image: url('../images/bg-modal.png');
+}
+.olvido3
+{
+    
+    width: 100%;
+    height: 100%;
+    color: #FFF;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    background-image: url('../images/bg-modal.png');
+}
+.form
+{
+    
+    border-radius: 12px;
+    width: 305px;
+    height: 565px;
+    padding: 25px;
+    background-color: #FFF;
+    color: #666;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    margin-left: -150px;
+    margin-top: -270px;
+    background: linear-gradient(to bottom, #FFFFFF 0%, #FFDB0C 0%, #FFFFFF 100%);
+}
+.olvidoform
+{
+  border-radius: 12px;
+    width: 305px;
+    height: 270px;
+    padding: 25px;
+    background-color: #FFF;
+    color: #666;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    margin-left: -150px;
+    margin-top: -156px;
+    background: linear-gradient(to bottom, #FFFFFF 0%, #FFDB0C 0%, #FFFFFF 100%);
+}
+.olvidoform1
+{
+  border-radius: 12px;
+    width: 305px;
+    height: 270px;
+    padding: 25px;
+    background-color: #FFF;
+    color: #666;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    margin-left: -150px;
+    margin-top: -156px;
+    background: linear-gradient(to bottom, #FFFFFF 0%, #FFDB0C 0%, #FFFFFF 100%);
+}
+.olvidoform2
+{
+  border-radius: 12px;
+    width: 305px;
+    height: 270px;
+    padding: 25px;
+    background-color: #FFF;
+    color: #666;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    margin-left: -150px;
+    margin-top: -156px;
+    background: linear-gradient(to bottom, #FFFFFF 0%, #FFDB0C 0%, #FFFFFF 100%);
+}
+.olvidoform3
+{
+  border-radius: 12px;
+    width: 305px;
+    height: 270px;
+    padding: 25px;
+    background-color: #FFF;
+    color: #666;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    margin-left: -150px;
+    margin-top: -156px;
+    background: linear-gradient(to bottom, #FFFFFF 0%, #FFDB0C 0%, #FFFFFF 100%);
+}
+.cerrar{
+	font-weight: 900;
+	text-align: right;
+}
+.cerrar a{
+	color: red;
+}

@@ -1,0 +1,151 @@
+{
+  "data": {
+    "post": [
+      {
+        "title": "titulo 0",
+        "category": "ing-sistemas",
+        "description": "\n\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit.\n\t\t\t\t\t\t\tAnimi labore quis tempore necessitatibus? Minus soluta eaque facilis nobis at, odit,\n\t\t\t\t\t\t\tdignissimos facere, repellendus pariatur delectus nemo nisi, alias perferendis minima. 0\n\t\t\t\t\t\t",
+        "owner": "00c2a283-2484-47fe-b612-2ba22e320ceb",
+        "id": null,
+        "createdAt": "2016-04-13T01:03:25.717Z",
+        "updatedAt": "2016-04-13T01:03:25.717Z"
+      },
+      {
+        "title": "titulo 1",
+        "category": "ing-sistemas",
+        "description": "\n\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit.\n\t\t\t\t\t\t\tAnimi labore quis tempore necessitatibus? Minus soluta eaque facilis nobis at, odit,\n\t\t\t\t\t\t\tdignissimos facere, repellendus pariatur delectus nemo nisi, alias perferendis minima. 1\n\t\t\t\t\t\t",
+        "owner": "0613d003-3e86-4efe-8068-abbbd172c4b1",
+        "id": null,
+        "createdAt": "2016-04-13T01:03:25.842Z",
+        "updatedAt": "2016-04-13T01:03:25.842Z"
+      },
+      {
+        "title": "titulo 2",
+        "category": "ing-sistemas",
+        "description": "\n\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit.\n\t\t\t\t\t\t\tAnimi labore quis tempore necessitatibus? Minus soluta eaque facilis nobis at, odit,\n\t\t\t\t\t\t\tdignissimos facere, repellendus pariatur delectus nemo nisi, alias perferendis minima. 2\n\t\t\t\t\t\t",
+        "owner": "898c0e47-542c-432e-b145-894d703e2659",
+        "id": null,
+        "createdAt": "2016-04-13T01:03:25.998Z",
+        "updatedAt": "2016-04-13T01:03:25.998Z"
+      },
+      {
+        "title": "titulo 3",
+        "category": "ing-sistemas",
+        "description": "\n\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit.\n\t\t\t\t\t\t\tAnimi labore quis tempore necessitatibus? Minus soluta eaque facilis nobis at, odit,\n\t\t\t\t\t\t\tdignissimos facere, repellendus pariatur delectus nemo nisi, alias perferendis minima. 3\n\t\t\t\t\t\t",
+        "owner": "b9af8259-be74-4735-a093-fcef157ae23f",
+        "id": null,
+        "createdAt": "2016-04-13T01:03:26.014Z",
+        "updatedAt": "2016-04-13T01:03:26.014Z"
+      }
+    ],
+    "user": [
+      {
+        "password": "$2a$10$SoWkpwgcpn.v4ACGf2EQz.XTS.aLV7d1W45XHYG1N4TSk2Iw6T7Ni",
+        "username": "few",
+        "cc": "2323",
+        "id": "00c2a283-2484-47fe-b612-2ba22e320ceb",
+        "photo": null,
+        "thumbnails": null,
+        "createdAt": "2016-04-13T01:03:25.998Z",
+        "updatedAt": "2016-04-13T01:03:25.998Z"
+      },
+      {
+        "password": "$2a$10$4KERtNtVuXs10qWvLzfhZ.Ugeh9/RaJfYiWZweicc4r//D0GCoSKm",
+        "username": "esneyder",
+        "cc": "1077470550",
+        "id": "0613d003-3e86-4efe-8068-abbbd172c4b1",
+        "photo": null,
+        "thumbnails": null,
+        "createdAt": "2016-04-13T01:03:26.279Z",
+        "updatedAt": "2016-04-13T01:03:26.279Z"
+      },
+      {
+        "password": "$2a$10$e5ETZgjP8058lvvu2tkeZ.ETZsVGDst7LCHGdcSWFqzmfNSonF0L2",
+        "username": "few2",
+        "cc": "2323",
+        "id": "898c0e47-542c-432e-b145-894d703e2659",
+        "photo": null,
+        "thumbnails": null,
+        "createdAt": "2016-04-13T01:03:26.575Z",
+        "updatedAt": "2016-04-13T01:03:26.575Z"
+      },
+      {
+        "password": "$2a$10$MW.Ox.5uBNCfT35zyxUV.ebF5Sjj9nUr/M33ElP1Df4E.a8XMvkHa",
+        "username": "esneyder2",
+        "cc": "1077470550",
+        "id": "b9af8259-be74-4735-a093-fcef157ae23f",
+        "photo": null,
+        "thumbnails": null,
+        "createdAt": "2016-04-13T01:03:26.873Z",
+        "updatedAt": "2016-04-13T01:03:26.873Z"
+      }
+    ]
+  },
+  "schema": {
+    "post": {
+      "id": {
+        "type": "string",
+        "primaryKey": true,
+        "unique": true
+      },
+      "title": {
+        "type": "string"
+      },
+      "category": {
+        "type": "string"
+      },
+      "description": {
+        "type": "string"
+      },
+      "owner": {
+        "type": "string",
+        "model": "user",
+        "foreignKey": true,
+        "alias": "owner"
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "user": {
+      "id": {
+        "primaryKey": true,
+        "unique": true,
+        "type": "string"
+      },
+      "photo": {
+        "type": "string",
+        "size": 500
+      },
+      "thumbnails": {
+        "type": "string",
+        "size": 500
+      },
+      "username": {
+        "type": "string"
+      },
+      "pass_generated": {
+        "type": "boolean"
+      },
+      "cc": {
+        "type": "string"
+      },
+      "password": {
+        "type": "string"
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    }
+  },
+  "counters": {
+    "user": {},
+    "post": {}
+  }
+}

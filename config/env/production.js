@@ -33,6 +33,9 @@ module.exports = {
 
   log: {
     level: "silent"
-  }
-
+  },
+  models:{
+	  migrate: "safe"
+  },
+	hookTimeout: 120000
 };

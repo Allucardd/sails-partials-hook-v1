@@ -8,18 +8,23 @@ const gulp = require('gulp-param')(require('gulp'), process.argv)
 ,			error = clc.red.bold
 ,			warn = clc.yellow
 ,			notice = clc.blue
-,			done = clc.green;
+,			done = clc.green
+,			browserify = require('gulp-browserify');
 
 gulp.task("es6",function() {
 	watch("src/js/**/*.js",function() {
 			gulp.src("src/js/**/*.js")
+			.pipe(browserify({
+				insertGlobals : true,
+      	debug : true
+    	}))
 			.pipe(babel({
 				presets: ['es2015']
 			}))
 			.on("data",function(chuck) {
 				console.log(chuck);
 			})
-			.pipe(gulp.dest('build/js'));		
+			.pipe(gulp.dest('build/js'));
 	})
 })
 
@@ -33,7 +38,7 @@ gulp.task("generate:partial",function generatePartials(name) {
 			fs.writeFile(`${source+name}.hbs`,`<div class="wrap-${name}"></div>`,function() {
 				console.log(notice(`Created: ${source+name}.hbs`));
 				var path = `aside:/${name}/../views/partials/${name}/${name}`;
-				var partialConfig = `./config/partials.json`;	
+				var partialConfig = `./config/partials.json`;
 				console.log(notice(`
 Try to update partials configuration if this don't work please append:
 ${clc.blue.bgWhite.underline( `${path}` )}
@@ -50,7 +55,7 @@ at: ${clc.blue.bgWhite.underline( `${partialConfig}` )} file!!!
 						console.log(done("Finisth task partials Created with success!!!"))
 					})
 				})
-			})	
+			})
 		})
 	} else {
 		throw "partial name is require please, do provide a name with the flag --name";
@@ -69,7 +74,7 @@ function ${name}() {
 `,function (err) {
 	if(err) throw err;
 		var path = `"source":"/${name}/${name}.js"`;
-		var scriptConfiguration = `./src/scripts/scripts.json`;	
+		var scriptConfiguration = `./src/scripts/scripts.json`;
 		console.log(notice(`
 Try to update script list configuration if this don't work please append:
 ${clc.blue.bgWhite.underline( `${path}` )}

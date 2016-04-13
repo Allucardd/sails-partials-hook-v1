@@ -1,0 +1,13 @@
+
+
+	body, input, select, textarea {
+		font-size: 11pt;
+	}
+
+	#header {
+		width: 20em;
+	}
+
+	#todo {
+		padding-right: 20em;
+	}

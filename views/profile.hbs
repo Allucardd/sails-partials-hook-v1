@@ -1,0 +1,178 @@
+<head>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/Personalizado.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <script src="js/Cargador.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    
+    <style>
+        
+       .mitad
+        {
+            width: 50%;
+        }
+        
+        img {
+            margin-top: 15px;
+            margin-bottom: 20px;
+        }
+        
+        textarea {
+            resize: none;
+        }
+        
+        a {
+            color: darkgoldenrod;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="container-fluid col-md-12">
+   <center> <div  class="container-fluid col-md-10 col-md-offset-1 ">
+   <div class="row">
+    <a href="index.html"> <img src="imagenes/baner.png" class="img-responsive"></a>
+   </div>
+</div></center>
+    </div>
+    
+    <br>
+    <div class="container">
+        <div class="row">
+            <div align="center" style="background-color:whitesmoke; width:px" class="col-md-2">
+                <img  class="img-thumbnail" src="imagenes/usuario.png">
+            </div>
+            <div class="col-md-10">
+                <ul class="nav nav-tabs">
+                    <li class=""><a href="#Perfil" data-toggle="tab" aria-expanded="false">Perfil</a>
+                    </li>
+                    <li class="active"><a href="#Editar" data-toggle="tab" aria-expanded="true">Editar Foto</a>
+                    </li>
+                    <li><a href="#Preferencia" data-toggle="tab" aria-expanded="true">Preferencia del foro</a>
+                    </li>
+                    <li><a href="#Mensaje" data-toggle="tab">Mensaje Privado</a>
+                    </li>
+                    <li class=""><a href="#Amigos" data-toggle="tab" aria-expanded="false">Amigos</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div id="Perfil" class="tab-pane">
+                        <h4>Editar Perfil</h4>
+                        <div class="col-md">
+                            <form role="form">
+                                <div class="form-group">
+                                    <label>Sobre Nombre</label>
+                                    <input type="text" class="form-control">
+                                    <label>Contraseña</label>
+                                    <input type="text" class="form-control">
+                                    <label>Confirmar Contraseña</label>
+                                    <input type="text" class="form-control">
+                                    <label>Correo</label>
+                                    <input type="text" class="form-control">
+                                    <label>Direccion</label>
+                                    <input type="text" class="form-control">
+                                    <label>Ocupacion</label>
+                                    <input type="text" class="form-control">
+                                    <label>Interes</label>
+                                    <textarea class="form-control"></textarea>
+                                </div>
+                            </form>
+                        </div>
+                        <div align="center" class="col-md">
+                            <button type="button" class="btn btn-default">Resetear</button>
+                            <button type="button" class="btn btn-default_foro">Enviar</button>
+                        </div>
+                    </div>
+                    <div id="Editar" class="tab-pane fade active in">
+                        <h4>Editar Foto</h4>
+                        <div class="col-md-9">
+                            <div align="center" class="col-md-3 borde">
+                                <img width="110" src="imagenes/usuario.png">
+                                <h5 style="color: gray; margin-top: -15px;">Foto</h5>
+                            </div>    
+                        </div>
+                        
+                        <div style="margin-top:10px" class="col-md-4">
+                        <input type="file" id="cargador_original" style="display:none">
+                        <div onclick="Cargar()" class="btn btn-default"><span class="glyphicon glyphicon-folder-open"></span> Cargar</div>
+                        <button type="button" class="btn btn-default_foro"><span class="glyphicon glyphicon-upload"></span> Subir</button>
+                            
+                        </div>
+                    </div>
+                    <div id="Preferencia" class="tab-pane fade">
+                        <h4>Editar configuracion global </h4>
+                        <p>Permitir que otros usuarios me contacten por correo:
+                            <label class="radio-inline" style="left: 50px; top: 0px;">
+                                <input type="radio" name="optradio">Si</label>
+                            <label class="radio-inline" style="left:45px">
+                                <input type="radio" name="optradio2">No</label>
+                        </p>
+                        <p>Administrador pueden enviar informacion a mi correo:
+                            <label class="radio-inline" style="left: 45px; top: 0px;">
+                                <input type="radio" name="optradio3">Si</label>
+                            <label class="radio-inline" style="left:40px">
+                                <input type="radio" name="optradio4">No</label>
+                        </p>
+                        <p>Permitir que usuarios comunes envien mensajes privados:
+                            <label class="radio-inline" style="left: 15px; top: 0px;">
+                                <input type="radio" name="optradio3">Si</label>
+                            <label class="radio-inline" style="left:13px">
+                                <input type="radio" name="optradio4">No</label>
+                        </p>
+                        <div class="col-md">
+                            <button type="button" class="btn btn-default">Resetear</button>
+                            <button type="button" class="btn btn-default_foro">Enviar</button>
+                        </div>
+                    </div>
+                    <div id="Mensaje" class="tab-pane fade">
+                        <h4>Componer Mensaje</h4>
+                        <label>Para</label>
+                        <input class="" type="text">
+                        <button type="button" class="btn btn-default_foro">Agregar</button>
+                        <form role="form">
+                            <div class="form-group">
+                                <label style="margin-top:8px">Titulo</label>
+                                <input style="width:400px" type="text" class="form-control">
+                                <label style="margin-top:8px">Mensaje:</label>
+
+                                <textarea rows="8" class="form-control"> </textarea>
+
+                                <div style="margin-top:8px;" align="center" class="col-md">
+                                    <button type="button" class="btn btn-default">Guardar Borrador</button>
+                                    <button type="button" class="btn btn-default_foro">Enviar Mensaje</button>
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+                    <div id="Amigos" class="tab-pane fade">
+                        <h4>Administrador de Amigos</h4>
+
+                        <label>Tus Amigos:</label>
+                        <br>
+                        <span>Puedes eliminar amigos clickeando en eliminar</span>
+                        <br>
+                        <label>Agregar nuevos Amigos:</label>
+                        <br>
+                        
+                        <textarea class="form-control mitad" rows="3"></textarea>
+                        
+                        
+                        <p>Puedes agregar amigos cada uno una diferente linea</p>
+                        <div style="margin-top:10px">
+                            <button type="button" class="btn btn-default">Eliminar</button>
+                            <button type="button" class="btn btn-default_foro">Enviar</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</body>

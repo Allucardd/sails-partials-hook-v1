@@ -82,4 +82,10 @@ module.exports = {
 
    // environment: process.env.NODE_ENV || 'development'
 
+  fixtures: {
+		user:[{
+			"pass_generated":true,
+			"username":"few"
+		}]
+  }
 };
