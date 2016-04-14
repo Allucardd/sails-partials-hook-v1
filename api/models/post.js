@@ -4,9 +4,10 @@ module.exports = {
 		id:{
 			type:"string",
 			primaryKey:true,
-			defaultsTo:function() {
-				uuid.v4();
-			}
+			defaultsTo: function() {
+      	return uuid.v4();
+    	}
+
 		},
 		title:{
 			type:"string",

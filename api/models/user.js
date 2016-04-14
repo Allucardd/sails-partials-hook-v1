@@ -1,26 +1,28 @@
 "use strict";
+let count = 0;
+
 module.exports = {
 	attributes: {
 		id:{
 			primaryKey:true,
 			type:"string",
-			defaultsTo:function() {
-				uuid.v4();
-			}
+			defaultsTo: function() {
+      	return uuid.v4();
+    	}
 		},
 		photo:{
 			type:"string",
 			size:500,
-			defaultsTo:function() {
-				uuid.v1();
-			}
+			defaultsTo: function() {
+      	return uuid.v4();
+    	}
 		},
 		thumbnails:{
 			type:"string",
 			size:500,//Miatura de la imagen principal
-			defaultsTo:function() {
-				uuid.v1();
-			}
+			defaultsTo: function() {
+      	return uuid.v4();
+    	}
 		},
 		username:{
 			type:"string",
@@ -44,7 +46,8 @@ module.exports = {
 		}
 	},//end attributes
 	hashPassword:function(data,next) {
-		console.log("encripta")
+		count++
+		console.log(count,"count")
 		bcrypt.hash(data.password,10,function(err,hash) {
 			if(err) return next(err);
 			data.password = hash;

@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="Login">
 	<head>
     <title>Login</title>
-    
+
     <link rel="stylesheet" href="css/bootstrap.css"/>
     <link rel="stylesheet" href="css/Personalizado.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <meta charset="utf-8"/>  
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <meta charset="utf-8"/>
+    <script src="js/angular.min.js"></script>
+    <script src="js/underscore-min.js"></script>
          <style>
-         
+
              .mitad{
                  width: 60%;
                  margin-top: 10px;
@@ -18,7 +18,7 @@
              a{
                  color:gray;
              }
-             
+
          </style>
 	</head>
 <body>
@@ -30,20 +30,32 @@
             <img src="imagenes/avata.jpg">
             </div>
            <div style="margin-top:30px" class="col-md">
-            <input placeholder="Usuario" class="form-control mitad">
-            <input placeholder="Contraseña" class="form-control mitad">
-            <a href="#" data-toggle="modal" data-target="#olvide_mi_contraseña" style="margin-top:15px">Olvide mi contraseña</a>
-            <br>
-            <button onclick="location.href='index.html'" type="button" class="btn btn-default_foro mitad">Ingresar</button>
+
+           <form  ng-controller="LoginController" novalidate ng-submit="request_login(username,password)">
+  						<h1>
+  							{[{ 2+3 }]}
+
+  						</h1>
+
+
+	            <input placeholder="Usuario" class="form-control mitad" ng-pattern="" ng-model="username">
+	            <input placeholder="Contraseña" type="password" class="form-control mitad" ng-model="password">
+	            <a href="#" data-toggle="modal" data-target="#olvide_mi_contraseña" style="margin-top:15px">Olvide mi contraseña</a>
+	            <br>
+	            <button type="submit" class="btn btn-default_foro mitad">Ingresar</button>
+           	</form>
+
              <br>
             <br>
             </div>
             </div>
+
+
         <div class="col-md-3"></div>
         </div>
     </div>
     <br>
-    
+
     <div id="olvide_mi_contraseña" class="modal fade" role="dialog">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -57,7 +69,7 @@
                 <div class="form-group">
                 <label>Correo</label>
                 <input type="text" class="form-control">
-                    
+
                 <div style="margin-top:5px" class="form-group">
                     <select class="form-control_foro2">
                     <option>Programas</option>
@@ -70,7 +82,7 @@
                     </select>
                     <button type="button" class="btn btn-default_foro">Restablecer</button>
                     </div>
-                    
+
                 </div>
                 </form>
             </div>
@@ -80,7 +92,7 @@
         </div>
         </div>
     </div>
-    
-    
+
+    <script src="/js/login.js"></script>
     </body>
 </html>

@@ -16,16 +16,12 @@ module.exports = {
    * Set the default database connection for models in the development       *
    * environment (see config/connections.js and config/models.js )           *
    ***************************************************************************/
-
-  // models: {
-  //   connection: 'someMongodbServer'
-  // }
-
   log: {
     level: "verbose"
   },
   models:{
-	  migrate: "drop"
+    connection: 'someMysqlServer',
+	  migrate: "safe"
   },
 	hookTimeout: 120000
 };
