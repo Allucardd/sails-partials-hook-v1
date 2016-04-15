@@ -4,6 +4,7 @@ module.exports = function handler_post (query) {
 
 	query = _.extend(query,{sort: 'createdAt DESC'})
   post.find(query)
+  	.populate("answers")
   	.then(function(docs) {
   		res.json(docs);
   	})

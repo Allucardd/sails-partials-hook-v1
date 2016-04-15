@@ -7,7 +7,9 @@ module.exports = {
 			defaultsTo: function() {
       	return uuid.v4();
     	}
-
+		},
+		owner_username:{
+			type:'string'
 		},
 		title:{
 			type:"string",
@@ -17,10 +19,15 @@ module.exports = {
 			type:'string'
 		},
 		description:{
-			type:"string"
+			type:"string",
+			size:10000
 		},
 		owner:{
 			model:"user"
+		},
+		answers:{
+			collection: 'answer',
+      via: 'owner'
 		}
 	}//end attributes
 };

@@ -4,21 +4,57 @@ const _ = require("underscore");
 const fs = require("fs");
 const uuid = require("node-uuid");
 
+function getRandom(users,equal) {
+	var pos = _.random(0,users.length-1);
+	var random = users[pos];
+	return {user:random,pos};
+}//end getRandom
+
+function generate_answers(users) {
+	let result = [];
+	_.each(users,function(user,index) {
+		_.each(user.items,function(item) {
+			var userRandom = getRandom(users);
+			var respuesta = [{
+				body:"respuesta..",
+				username:userRandom.user.items[0].username,
+				thumbnails:Date.now(),
+				owner:userRandom.user.items[0].id,
+				id:uuid.v4()
+			}]
+			users[index]["items"][0]["answers"] = respuesta
+
+		  result.push({
+		  	model:"answer",
+		  	items:respuesta
+		  })//end results
+		})
+	})
+
+	fs.writeFile("./fixtures/answer.json",JSON.stringify(result),function() {
+	 	console.log("answer generated");
+	 	generate_post(users)
+  })
+
+}//end generate answers
 
 function generate_post(users) {
 	let result = [];
 	_.each(users,function(user,index) {
-		_.each(user.items,function(item) {
+		_.each(user.items,function(item,next) {
+
 				result.push({
 					model:"post",
 					items:[{
 						title:"titulo "+index,
-						category:"ing-sistemas",
+						owner_username:item.username,
+						category: index%2 === 0 ? "psicologia" : "ing-sistemas",
 						description:`
 							Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 							Animi labore quis tempore necessitatibus? Minus soluta eaque facilis nobis at, odit,
 							dignissimos facere, repellendus pariatur delectus nemo nisi, alias perferendis minima. ${index}
 						`,
+						answers:item.answers[0]["id"],
 						owner:item.id
 					}]
 				})
@@ -71,7 +107,7 @@ function generate_users (cb) {
 	})
 
 	fs.writeFile("./fixtures/user.json",JSON.stringify(result),function() {
-		generate_post(result);
+		generate_answers(result);
 	});
 
 }//generate users
