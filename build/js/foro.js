@@ -4,24 +4,10 @@ angular.module("Foro",[])
     $interpolateProvider.endSymbol("}]}");
   })
 	.controller("ForoController",function ($scope) {
-		/*
-		$scope.programs = [{
-			name:"Trabajo Social",
-			image:"/imagenes/icon_trabajo_social.png"
-		},{
-			name:"Teologia",
-			image:"/imagenes/icon_teologia.png"
-		},{
-			name:"Ingenieria de Sistemas",
-			image:"/imagenes/icon_sistema.png"
-		},{
-			name:"Ingenieria Civil",
-			image:"/imagenes/icon_ingenieria_civil.png"
-		},{
-			name:"Antropologia",
-			image:"/imagenes/icon_antropologia.png"
-		}]
-		*/
+		$scope.request_program = function() {
+			alert("fewfw");
+		}
+
 		$(document).ready(function() {
 			var $slick = $(".wrap-grid-programs__ul")
 			$slick.slick({
@@ -29,6 +15,8 @@ angular.module("Foro",[])
 				slidesToShow: 4,
 				slidesToScroll: 4,
 				arrows:true,
+				speed:200,
+				centerPadding: '60px',
 				responsive: [{
 		      breakpoint: 1062,
 		      settings: {

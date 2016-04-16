@@ -6,6 +6,120 @@ body {
 	float: left;
 }
 
+#text_program {
+	outline: none;
+	border: none;
+	padding: 8px;
+	box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.07);
+	margin-top: 14px;
+	cursor: pointer;
+}
+
+.article-create-post {
+	max-width: 1000px;
+	position: relative;
+	margin: 0px auto;
+	padding: 10px;
+	margin-bottom: 40px;
+	border-radius: 10px;
+	padding-top: 20px;
+	padding-bottom: 25px;
+	background: whitesmoke;
+}
+
+.titulo {
+	font-size: 18px;
+	padding-bottom: 5px;
+	display: inline-block;
+}
+
+.wrap-profile-image {
+	background-image: url("/imagenes/uniclaretiana_logo.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 110px;
+	width: 120px;
+	height: 120px;
+	position: relative;
+	display: inline-block;
+	top: -110px;
+	border-radius: 100%;
+	margin-right: 25px;
+	margin-left: 20px;
+	background-color: white;
+}
+
+.wrap-form-create-post {
+	width: 780px;
+	position: relative;
+	display: inline-block;
+}
+@media (max-width:995px) {
+	.wrap-form-create-post {
+		width: 100%;
+		padding: 20px
+	}
+	.wrap-profile-image {
+    margin: 0px auto;
+    display:block;
+    top:0px;
+	}
+}
+
+.fix-wrong-description {
+  margin-top: -3px !important;
+}
+
+.wrong-field {
+	background: #E21E1E;
+	margin-top: -19px;
+	padding: 5px;
+	color: white;
+	font-size: 13px;
+	font-style: italic;
+	margin-bottom: 3px;
+}
+
+.title-form-create-post {
+	font-weight: bold;
+	padding-bottom: 7px;
+	border-bottom: 1px solid #4D4D4D;
+	color: #4D4D4D;
+	font-size: 25px;
+	text-align: left;
+	margin-top: 2px;
+	margin-bottom: 18px;
+}
+
+#text_title {
+	width: 100%;
+	height: 40px;
+	margin-bottom: 20px;
+	font-size: 16px;
+	border: none;
+	box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.26);
+	padding:8px;
+}
+
+#text_title:focus {
+	box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.26);
+	outline:none;
+}
+#text_description:focus {
+	box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.26);
+	outline:none;
+}
+
+#text_description {
+	width:100%;
+	font-family:'Muli';
+	padding: 8px;
+	border: none;
+	box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.26);
+}
+
+
+
 .float-right {
 	float:right;
 }
@@ -19,18 +133,33 @@ body {
 .article-choose-program {
 	position: relative;
 	background-color:#4d4d4d;
-	height:250px;
 	padding-top:10px;
 	padding-bottom:10px;
 	width: 100%;
 	clear: both;
+	padding-right:10px;
+	padding-left:10px;
+	height: 235px;
 }
 
 
+@media (max-width:966px) {
+	.article-choose-program {
+		padding-right:0px;
+		padding-left:0px;
+	}
+}
+@media (max-width:966px) {
+	.wrap-title__title-choose-program {
+		padding-right:14px;
+		padding-left:14px;
+	}
+}
+
 .wrap-grid-programs ul {
 	text-align:center;
-	margin-top:30px;
-	margin-bottom:30px;
+	margin-top:20px;
+	padding:0px;
 }
 
 .wrap-slider-arrows {
@@ -153,13 +282,10 @@ body {
 	color: white;
 	font-size: 25px;
 	max-width: 1000px;
+	border-bottom: 1px solid #A8A8A8;
 	margin: 0px auto;
 	position: relative;
-	left: 26px;
-	padding-top: 20px;
-	height: 36px;
-	padding-bottom: 15px;
-
+	height: 47px;
 }
 
 .banner-image {
@@ -586,7 +712,14 @@ hr.foro{
 	color: #fff;
 	background-color: #f0ad4e;
 	border-color: #eea236;
+	height: 36px;
+	border: none;
+	width: 120px;
+	border-radius: 25px;
+	margin-left: 10px;
+	outline: none;
 }
+
 .btn-default_foro:focus,
 .btn-default_foro.focus {
 	color: #fff;
@@ -601,7 +734,6 @@ hr.foro{
 .btn-default_foro:active,
 .btn-default_foro.active,
 .open > .dropdown-toggle.btn-default {
-	color: black;
 	background-color: #ec971f;
 	border-color: #d58512;
 }

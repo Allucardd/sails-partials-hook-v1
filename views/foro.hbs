@@ -21,21 +21,97 @@
 		</article>
 	</div>
 
+
+	<article class="article-create-post">
+			<div class="wrap-profile-image"></div>
+			<div class="wrap-form-create-post">
+					<form >
+					  <h2 class="title-form-create-post">Crear nuevo tema</h2>
+						<span class="titulo">Titulo</span>
+						<input type="text" id="text_title">
+						<div class="wrong-field hide">
+							<span>Debes completar este campo correctamente</span>
+						</div>
+
+						<span class="titulo">Descripcion</span>
+						<textarea name="" id="text_description" cols="30" rows="8"></textarea>
+						<div class="wrong-field fix-wrong-description hide">
+							<span>Debes completar este campo correctamente</span>
+						</div>
+
+						<select name="" id="text_program">
+							<option value="Trabajo Social">Programa</option>
+							<option value="Trabajo Social">Trabajo Social</option>
+							<option value="Trabajo Social">Trabajo Social</option>
+							<option value="Trabajo Social">Trabajo Social</option>
+							<option value="Trabajo Social">Trabajo Social</option>
+						</select>
+						<button class="btn-default_foro" type="submit">Enviar</button>
+					</form>
+			</div>
+	</article>
+
+
+
 	<article class="article-choose-program">
-		<h1 class="title-choose-program">
-			Programa
-			<span class="program-name">Ingenieria de sistemas</span>
-		</h1>
+		<div class="wrap-title__title-choose-program">
+			<h1 class="title-choose-program">
+				Programa
+				<span class="program-name">Ingenieria de sistemas</span>
+			</h1>
+		</div>
 
 		<div class="wrap-slider-arrows">
 			<div class="left float-left arrow-left"> <i class="material-icons">arrow_back</i> </div>
 			<div class="right float-right arrow-right"> <i class="material-icons">arrow_forward</i> </div>
 		</div>
 
-
 		<div class="wrap-grid-programs">
 			<ul class="wrap-grid-programs__ul">
-				<li>
+
+				<li ng-click="request_program()">
+					<div class="wrap-program">
+						<img class="" alt="" src="/imagenes/icon_trabajo_social.png">
+						<span >Trabajo Social </span>
+					</div>
+				</li>
+
+				<li ng-click="request_program()">
+					<div class="wrap-program">
+						<img class="" alt="" src="/imagenes/icon_trabajo_social.png">
+						<span >Trabajo Social </span>
+					</div>
+				</li>
+
+				<li ng-click="request_program()">
+					<div class="wrap-program">
+						<img class="" alt="" src="/imagenes/icon_trabajo_social.png">
+						<span >Trabajo Social </span>
+					</div>
+				</li>
+
+				<li ng-click="request_program()">
+					<div class="wrap-program">
+						<img class="" alt="" src="/imagenes/icon_trabajo_social.png">
+						<span >Trabajo Social </span>
+					</div>
+				</li>
+
+				<li ng-click="request_program()">
+					<div class="wrap-program">
+						<img class="" alt="" src="/imagenes/icon_trabajo_social.png">
+						<span >Trabajo Social </span>
+					</div>
+				</li>
+
+				<li ng-click="request_program()">
+					<div class="wrap-program">
+						<img class="" alt="" src="/imagenes/icon_trabajo_social.png">
+						<span >Trabajo Social </span>
+					</div>
+				</li>
+
+				<li ng-click="request_program()">
 					<div class="wrap-program">
 						<img class="" alt="" src="/imagenes/icon_trabajo_social.png">
 						<span >Trabajo Social </span>
@@ -43,42 +119,7 @@
 				</li>
 
 
-				<li>
-					<div class="wrap-program">
-						<img class="" alt="" src="/imagenes/icon_trabajo_social.png">
-						<span >Trabajo Social </span>
-					</div>
-				</li>
 
-				<li>
-					<div class="wrap-program">
-						<img class="" alt="" src="/imagenes/icon_trabajo_social.png">
-						<span >Trabajo Social </span>
-					</div>
-				</li>
-
-
-				<li>
-					<div class="wrap-program">
-						<img class="" alt="" src="/imagenes/icon_trabajo_social.png">
-						<span >Trabajo Social </span>
-					</div>
-				</li>
-
-				<li>
-					<div class="wrap-program">
-						<img class="" alt="" src="/imagenes/icon_trabajo_social.png">
-						<span >Trabajo Social </span>
-					</div>
-				</li>
-
-
-				<li>
-					<div class="wrap-program">
-						<img class="" alt="" src="/imagenes/icon_trabajo_social.png">
-						<span >Trabajo Social </span>
-					</div>
-				</li>
 			</ul>
 		</div>
 	</article>
