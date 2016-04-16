@@ -1,272 +1,95 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="Foro">
 <head>
-    <title>Foro</title>
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/Personalizado.css">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-
-        .borde{
-            border: 1px solid;
-            border-bottom-color: black;
-            border-radius: 5px;
-        }
-
-        thead {
-            background-color: #3D3C3A;
-            font-size: 17px;
-            color: white;
-        }
-
-        th {
-            width: 1000px;
-            font-weight: 400;
-        }
-
-        a {
-            color: darkgoldenrod;
-        }
-
-        .gray {
-            color: gray;
-        }
-
-        a:hover,
-        a:focus {
-            text-decoration: none;
-            color: black;
-        }
-
-        textarea {
-            resize: none;
-        }
-
-        .espacio {
-            width: 5px;
-            height: auto;
-            display: inline-block;
-        }
-    </style>
-
+	<title>Foro</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/foro.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="/css/font.css">
+	<link rel="stylesheet" href="/css/slick.css">
 </head>
 
-<body>
+<body ng-controller="ForoController">
+	<div class="wrap-content">
+		<article  class="wrap-banner">
+			<a href="/">
+				<div class="banner-image"></div>
+			</a>
+		</article>
+	</div>
 
-<div class="container-fluid col-md-12">
-   <center> <div  class="container-fluid col-md-10 col-md-offset-1 ">
-   <div class="row">
-    <a href="index.html"> <img src="imagenes/baner.png" class="img-responsive"></a>
-   </div>
-</div></center>
-    </div>
+	<article class="article-choose-program">
+		<h1 class="title-choose-program">
+			Programa
+			<span class="program-name">Ingenieria de sistemas</span>
+		</h1>
 
-
-
-    <!----Encabezado----->
-    <div class="container">
-        <div class="jumbotron">
-
-            <h2>Elige tu programa</h2>
-            <h5>En este espacio se comentaran todas aquellas dudas que hayan acerca de los programas.
-        </h5>
-
-            <form>
-                <button data-toggle="modal" data-target="#nuevo_tema" style="width:200px" type="button" class="btn btn-default_foro">Nuevo Tema</button>
-            </form>
-        </div>
-    </div>
+		<div class="wrap-slider-arrows">
+			<div class="left float-left arrow-left"> <i class="material-icons">arrow_back</i> </div>
+			<div class="right float-right arrow-right"> <i class="material-icons">arrow_forward</i> </div>
+		</div>
 
 
-    <!-------Modal------->
-
-    <div id="nuevo_tema" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-
-            <!------contenido Modal--------->
-
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">X</button>
-                    <h2>Crear Nuevo Tema</h2>
-                </div>
-                <div class="modal-body">
-                    <form role="form">
-                        <div class="form-group">
-                            <div style="background-color:#3D3C3A; height:40px" class="col-md">
-                                <label style="margin-top:8px;margin-left:15px;color:white;font-weight:500; font-size:17px">Detalles del Tema</label>
-                            </div>
-                            <label style="margin-top:8px">Titulo</label>
-                            <input type="text" maxlength="30" class="form-control">
-                            <label style="margin-top:8px">Mensaje:</label>
-
-                            <textarea rows="8" class="form-control"> </textarea>
-                            <div class="row">
-
-                                <div style="margin-top:8px;width:460px" class="col-md-12">
-                                    <div class="form-group">
-                                        <select class="form-control_foro2">
-                                            <option>Programas</option>
-                                            <option>Antropologia</option>
-                                            <option>Ing.Sistema</option>
-                                            <option>Ing.Industrial</option>
-                                            <option>Psicologia</option>
-                                            <option>Teologia</option>
-                                            <option>Tra.Social</option>
-                                        </select>
-                                        <button type="button" class="btn btn-default_foro">Enviar Tema</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                </div>
-            </div>
-        </div>
-    </div>
+		<div class="wrap-grid-programs">
+			<ul class="wrap-grid-programs__ul">
+				<li>
+					<div class="wrap-program">
+						<img class="" alt="" src="/imagenes/icon_trabajo_social.png">
+						<span >Trabajo Social </span>
+					</div>
+				</li>
 
 
-    <!----Programas------>
+				<li>
+					<div class="wrap-program">
+						<img class="" alt="" src="/imagenes/icon_trabajo_social.png">
+						<span >Trabajo Social </span>
+					</div>
+				</li>
 
-    <div class="container borde">
-        <div align="center" class="row">
-            <div align="left" style="background-color:#4d4d4d;height:38" class="col-md">
-                <label style="margin-top:7px;margin-left:15px;color:white;font-weight:500; font-size:17px;font-weight:400">Programas</label>
-            </div>
-            <div class="center-block col-md-7" style="float: none;margin-top:10px">
-
-                <div class="col-md-4">
-                    <a class="gray" href="index.html">
-                        <img src="imagenes/icon_sistema.png">
-                        <br> Ingenieria en Sistema
-                    </a>
-                </div>
-
-                <div class="col-md-4">
-                    <a class="gray" href="#">
-                        <img src="imagenes/icon_psicologia.png">
-                        <br> Psicologia
-                    </a>
-                </div>
-
-                <div class="col-md-4">
-                    <a class="gray" href="#">
-                        <img src="imagenes/icon_trabajo_social.png">
-                        <br> Trabajo Social
-                    </a>
-                </div>
-                <br>
-                <div class="col-md-4">
-                    <a class="gray" href="#">
-                        <img src="imagenes/icon_ingenieria%20civil.png" style="margin-top: 10px; height: 118px;">
-                        <br> Ingenieria Industrial
-                    </a>
-                </div>
-
-                <div class="col-md-4">
-                    <a class="gray" href="#">
-                        <img src="imagenes/icon_antropologia.png">
-                        <br> Antropologia
-                    </a>
-                </div>
-
-                <div class="col-md-4">
-                    <a class="gray" href="#">
-                        <img src="imagenes/icon_teologia.png" style="margin-top: 10px; height: 118px;">
-                        <br> Teologia
-                    </a>
-                </div>
-            </div>
-        </div>
-        <br>
-    </div>
-
-    <!-----Tablas------->
-
-    <div style="margin-top:20px" class="container borde">
-        <div class="row">
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th>
-                            Tema
-                        </th>
-                        <th>Visitas</th>
-                        <th>Ultimo Post</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            <a href="Ing%20Sistema-Subforo.html">La cafeteria no nos da descuento</a>
-                            <p>Por pife, Abril 30</p>
-                        </td>
-                        <td>
-                            <label> 4 Respuestas</label>
-                            <p>5 visitas</p>
-                        </td>
-                        <td>
-                            <div class="col-md-4">
-                                <img width="50px" class="img-circle" src="imagenes/animal.png">
-                            </div>
-                            <div class="col-md-7">
-                                <label>Felipe</label>
-                                <p><a href="#">Hace 5 horas</a>
-                                </p>
-                            </div>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <a href="#">Hay fantasmas en las escaleras</a>
-                            <p>Por Adrian, Abril 29</p>
-                        </td>
-                        <td>
-                            <label>20 Respuestas</label>
-                            <p>180 visitas</p>
-                        </td>
-                        <td>
-                            <div class="col-md-4">
-                                <img width="60px" class="img-circle" src="imagenes/country_girl-wallpaper-1920x1080.jpg">
-                            </div>
-                            <div class="col-md-7">
-                                <label>Emy</label>
-                                <p><a href="#">Hace 1 dia</a>
-                                </p>
-                            </div>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <a href="#">La matricula subio  casi  un 10%</a>
-                            <p>Por Angela, Abril 20</p>
-                        </td>
-                        <td>
-                            <label>15 Respuestas</label>
-                            <p>40 visitas</p>
-                        </td>
-                        <td>
-                            <div class="col-md-4">
-                                <img width="60px" class="img-circle" src="imagenes/girl_40-wallpaper-1920x1080.jpg">
-                            </div>
-                            <div class="col-md-7">
-                                <label>Lisa</label>
-                                <p><a href="#">Hace 3 dia</a>
-                                </p>
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-<br>
+				<li>
+					<div class="wrap-program">
+						<img class="" alt="" src="/imagenes/icon_trabajo_social.png">
+						<span >Trabajo Social </span>
+					</div>
+				</li>
 
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.js"></script>
+				<li>
+					<div class="wrap-program">
+						<img class="" alt="" src="/imagenes/icon_trabajo_social.png">
+						<span >Trabajo Social </span>
+					</div>
+				</li>
+
+				<li>
+					<div class="wrap-program">
+						<img class="" alt="" src="/imagenes/icon_trabajo_social.png">
+						<span >Trabajo Social </span>
+					</div>
+				</li>
+
+
+				<li>
+					<div class="wrap-program">
+						<img class="" alt="" src="/imagenes/icon_trabajo_social.png">
+						<span >Trabajo Social </span>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</article>
+
+
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/underscore-min.js"></script>
+	<script src="js/angular.min.js"></script>
+	<script src="js/foro.js"></script>
+
 </body>
+</html>

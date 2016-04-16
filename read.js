@@ -37,12 +37,21 @@ function generate_answers(users) {
   })
 
 }//end generate answers
+var c = [];
 
 function generate_post(users) {
 	let result = [];
 	_.each(users,function(user,index) {
 		_.each(user.items,function(item,next) {
+			var r = _.some(result,function(d) {
+				return d.title === ("titulo "+index);
+			})
 
+			if(r) {
+				console.log("repite","titulo "+index);
+			}
+
+				c.push(index);
 				result.push({
 					model:"post",
 					items:[{
