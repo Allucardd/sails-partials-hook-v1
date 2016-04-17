@@ -24,13 +24,14 @@ body {
 	border-radius: 10px;
 	padding-top: 20px;
 	padding-bottom: 25px;
-	background: whitesmoke;
+  background: whitesmoke;
 }
 
 .titulo {
 	font-size: 18px;
 	padding-bottom: 5px;
 	display: inline-block;
+	color:darkgoldenrod;
 }
 
 .wrap-profile-image {
@@ -47,6 +48,20 @@ body {
 	margin-right: 25px;
 	margin-left: 20px;
 	background-color: white;
+}
+.post-owner {
+	padding: 30px !important;
+  background: #4D4D4D;
+}
+
+.no-margin-left {
+	margin-left:0px !important;
+}
+
+.wrap-post {
+	border: 1px solid #4D4D4D;
+	border-radius: 10px;
+	overflow:hidden;
 }
 
 .wrap-form-create-post {
@@ -200,7 +215,6 @@ body {
 	transition: all 0.5s;
 }
 
-
 .wrap-grid-programs {
 	max-width: 1000px;
 	position: relative;
@@ -286,6 +300,104 @@ body {
 	margin: 0px auto;
 	position: relative;
 	height: 47px;
+}
+
+.section-foro {
+	max-width: 1000px;
+	position: relative;
+	margin: 30px auto;
+	padding-top: 15px;
+	padding-bottom: 30px;
+	padding-left: 25px;
+	padding-right: 25px;
+	border: 1px solid #4D4D4D;
+	border-radius: 10px;
+}
+
+.min-height {
+  min-height: 100px;
+}
+
+.section-foro .section-photo {
+	width: 196px;
+	display: inline-block;
+	text-align: center;
+	padding: 10px;
+	position: relative;
+	margin-left: 10px;
+}
+
+.profile-image {
+	width: 120px;
+	height: 120px;
+	background-color:white;
+	position: relative;
+	margin: 15px auto;
+	border-radius: 100%;
+}
+
+.section-photo .titulo {
+	color:darkgoldenrod;
+	font-weight:bold;
+}
+
+.wrap-options {
+  margin-top: 10px;
+  border-top:1px solid #4D4D4D;
+  padding-top:10px;
+}
+.wrap-options span {
+	cursor:pointer;
+}
+
+.respuesta {
+	margin-bottom: 20px;
+	background: #ddd;
+	border-radius: 5px;
+	border: 1px solid #ADADAD;
+	margin-top: 20px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.push-answer {
+	display:inline-block;
+	min-width:725px;
+	vertical-align: top;
+	min-height:200px;
+}
+
+.respuesta .section-photo {
+	top:0px !important;
+	border-right:1px solid #ADADAD;
+}
+
+
+.container-other-anwers {
+	min-height: 400px;
+	margin-top: 15px;
+}
+
+.line-right {
+	padding-right: 8px;
+	height: 20px;
+	border-right: 1px solid #4D4D4D;
+	padding-bottom: 23px;
+}
+
+
+.section-foro .wrap-answers {
+	display: inline-block;
+	min-width: 713px;
+	margin-left: 10px;
+	padding: 10px;
+	position: relative;
+	vertical-align: top;
+	padding-right: 30px;
+}
+
+.section-foro .wrap-description {
+	padding: 10px;
 }
 
 .banner-image {
