@@ -89,19 +89,23 @@ function generate_users (cb) {
 
 		if(data) {
 			for (var i = 1; i < data.length; i++) {
-				data[i]["push"]("Contraseña")
+	//			data[i]["push"]("Contraseña")
 
+//				data[i][5]  = _.reject(data[i][5].split(" ").reverse(),(ele)=> !ele[0] ? true : false).join(" ");
 
 				var username = data[i][5];
+				var complete = data[i][5].split(" ");
+				var firstName = complete[complete.length-2];
 				var cc = data[i][4];
 
-				let short_pass = uuid.v4().split("-")[0];
-				data[i][7] = short_pass;
+//				let short_pass = uuid.v4().split("-")[0];
+//				data[i][7] = short_pass;
 				result.push({
 					model:"user",
 					items:[{
-						 password:short_pass,
+						 password:data[i][4],
 						 username,
+						 firstName,
 						 cc,
 						 id:uuid.v4()
 					}]

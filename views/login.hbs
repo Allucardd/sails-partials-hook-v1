@@ -1,98 +1,76 @@
 <!DOCTYPE html>
 <html ng-app="Login">
-	<head>
-    <title>Login</title>
+<head>
+	<title>Login</title>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+	<link rel="stylesheet" href="css/login.css"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<meta charset="utf-8"/>
+	<script src="js/angular.min.js"></script>
+	<script src="js/underscore-min.js"></script>
 
-    <link rel="stylesheet" href="css/bootstrap.css"/>
-    <link rel="stylesheet" href="css/Personalizado.css"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <meta charset="utf-8"/>
-    <script src="js/angular.min.js"></script>
-    <script src="js/underscore-min.js"></script>
-         <style>
-
-             .mitad{
-                 width: 60%;
-                 margin-top: 10px;
-             }
-             a{
-                 color:gray;
-             }
-
-         </style>
-	</head>
+</head>
 <body>
-    <div align="center" class="container">
-    <div  class="row">
-        <div class="col-md-3"></div>
-        <div class="col-md-6 borde" style="margin-top:60px">
-        <div class="col-md" style="margin-top:30px">
-            <img src="imagenes/avata.jpg">
-            </div>
-           <div style="margin-top:30px" class="col-md">
+	<article class="article-login">
+		<section class="section-login">
+			<div class="wrap-form-login text-center">
+				<img src="imagenes/avata.jpg">
 
-           <form  ng-controller="LoginController" novalidate ng-submit="request_login(username,password)">
-  						<h1>
-  							{[{ 2+3 }]}
+				<form name="formLogin" class="form-login" ng-controller="LoginController" novalidate ng-submit="request_login( formLogin.entryLogin.$valid && formLogin.entryPassword.$valid ? {'username':username,'password':password} : null)">
 
-  						</h1>
+					<span class="label-field">Usuario</span>
+					<input name="entryLogin" ng-trim="false" ng-change="testUsername()" ng-focus="focus_label(onFocus)" class="form-control" ng-model="username" placeholder="Completa este campo">
 
+					<div class="msg-info field-valid {[{ nameValid ? '': 'hide' }]}">
+						<i class="material-icons">check_circle</i>
+						<span>{[{ username }]}</span>
+					</div>
 
-	            <input placeholder="Usuario" class="form-control mitad" ng-pattern="" ng-model="username">
-	            <input placeholder="Contraseña" type="password" class="form-control mitad" ng-model="password">
-	            <a href="#" data-toggle="modal" data-target="#olvide_mi_contraseña" style="margin-top:15px">Olvide mi contraseña</a>
-	            <br>
-	            <button type="submit" class="btn btn-default_foro mitad">Ingresar</button>
-           	</form>
+					<div class="msg-info wrong-username {[{ username === '' ? 'hide': '' }]} {[{ !nameValid ? '': 'hide' }]}">
+						<i class="material-icons">cancel</i>
+						<span>Escribe un nombre con minimo 3 caracteres sin espacios, en minusculas.</span>
+					</div>
 
-             <br>
-            <br>
-            </div>
-            </div>
+					<div class="msg-info {[{ username === '' ? '': 'hide' }]}">
+						<i class="material-icons">report</i>
+						<span>Escribe tu primer nombre en minusculas.</span>
+					</div>
 
 
-        <div class="col-md-3"></div>
-        </div>
-    </div>
-    <br>
+					<span class="label-field">Contraseña</span>
+					<input name="entryPassword" placeholder="Completa este campo" type="password" class="form-control" ng-model="password" ng-change="testPassword()">
 
-    <div id="olvide_mi_contraseña" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-        <div class="modal-content">
-        <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">X</button>
-            <h3 class="modal-title">Recuperar contraseña</h3>
-            </div>
-            <div class="modal-body">
-            <p>Para recuperar su contraseña escriba su correo y seleccione su programa</p>
-            <form class="form-line" role="form">
-                <div class="form-group">
-                <label>Correo</label>
-                <input type="text" class="form-control">
+					<div class="msg-info field-valid {[{ passValid ? '': 'hide' }]}">
+						<i class="material-icons">check_circle</i>
+						<span>Listo!</span>
+					</div>
 
-                <div style="margin-top:5px" class="form-group">
-                    <select class="form-control_foro2">
-                    <option>Programas</option>
-                    <option>Antropologia</option>
-                    <option>Ing.Sistema</option>
-                    <option>Ing.Industrial</option>
-                    <option>Psicologia</option>
-                    <option>Teologia</option>
-                    <option>Tra.Social</option>
-                    </select>
-                    <button type="button" class="btn btn-default_foro">Restablecer</button>
-                    </div>
+					<div class="msg-info wrong-username {[{ password === '' ? 'hide': '' }]} {[{ !passValid ? '': 'hide' }]}">
+						<i class="material-icons">cancel</i>
+						<span>Escribe una contraseña con minimo 3 caracteres sin espacios.</span>
+					</div>
 
-                </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-            </div>
-        </div>
-        </div>
-    </div>
+					<div class="msg-info {[{ password === '' ? '': 'hide' }]}">
+						<i class="material-icons">report</i>
+						<span>Escribe una contraseña, si aun no tienes escribe tu documento de identificacion.</span>
+					</div>
 
-    <script src="/js/login.js"></script>
-    </body>
+
+					<div class="wrap-section-getIn">
+						<button type="submit" class="btn btn-default_foro mitad">
+						<span class="label-getin">Ingresar</span>
+						<i class="material-icons float-right offset-arrow">arrow_forward</i>
+						</button>
+
+						<a href="#" class="label-reset-password">Olvide mi contraseña</a>
+					</div>
+				</form>
+			</div>
+
+		</section>
+	</article>
+
+	<script src="/js/login.js"></script>
+</body>
 </html>

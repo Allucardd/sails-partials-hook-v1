@@ -48,6 +48,9 @@ module.exports.policies = {
   	get:["sessionAuth"]
   },
 
+	LoginController:{
+  	getIn:["catchLogin"]
+  },
 
   /***************************************************************************
   *                                                                          *

@@ -32,11 +32,11 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  "/v1/user":"UserController.get",
-
-  "/v1/post":"PostController.get",
-
   "/":"HomeController.serve",
+
+	"POST /login":"LoginController.getIn",
+
+	"PUT /login":"LoginController.logOut",
 
   "/login":"LoginController.serve",
 
@@ -44,7 +44,12 @@ module.exports.routes = {
 
   "/foro":"ForoController.serve",
 
-  "/gallery":"GalleryController.serve"
+  "/gallery":"GalleryController.serve",
+
+  "/v1/user":"UserController.get",
+
+  "/v1/post":"PostController.get"
+
 
   /***************************************************************************
   *                                                                          *

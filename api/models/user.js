@@ -17,12 +17,20 @@ module.exports = {
       	return uuid.v4();
     	}
 		},
+		loginOnce:{
+			type:"boolean",
+			defaultsTo:false
+		},
 		thumbnails:{
 			type:"string",
 			size:500,//Miatura de la imagen principal
 			defaultsTo: function() {
       	return uuid.v4();
     	}
+		},
+		firstName:{
+			type:"string",
+			required:true
 		},
 		username:{
 			type:"string",
