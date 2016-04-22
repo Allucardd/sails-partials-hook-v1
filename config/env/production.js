@@ -35,6 +35,7 @@ module.exports = {
     level: "silent"
   },
   models:{
+    connection: 'localDiskDb',
 	  migrate: "drop"
   },
 	hookTimeout: 120000
