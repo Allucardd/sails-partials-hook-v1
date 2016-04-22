@@ -35,7 +35,7 @@ module.exports = {
     level: "silent"
   },
   models:{
-	  migrate: "safe"
+	  migrate: "drop"
   },
 	hookTimeout: 120000
 };

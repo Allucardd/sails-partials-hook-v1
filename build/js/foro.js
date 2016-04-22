@@ -58,7 +58,8 @@ $scope.addpost = function(){
             $scope.validate_description = document.getElementById("text_description").value
             $scope.validate_title = document.getElementById("text_title").value
             $http.post("https://uniclaretiana.herokuapp.com/v1/post",{
-            withCredentials:true,
+						withCredentials: true,
+						headers:{'Content-Type': 'application/json; charset=utf-8'},
             title:  $scope.newpost.title,
             description:  $scope.newpost.description,
             owner_username : $scope.newpost.owner_username,
@@ -85,7 +86,7 @@ $scope.addpost = function(){
     }
     //end addpost function
 
-    $http.get("https://uniclaretiana.herokuapp.com/v1/post",{withCredentials:true})
+    $http.get("https://uniclaretiana.herokuapp.com/v1/post",{withCredentials: true,headers:{'Content-Type': 'application/json; charset=utf-8'}})
         .success(function(data){
             $scope.posts = data.slice(0,limit_post)
             $scope.n_post = data
@@ -105,7 +106,7 @@ $scope.addpost = function(){
 
     $scope.filter_category = function  (){
 		$scope.filter_mod = document.getElementById("filter_category").value
-		$http.get("https://uniclaretiana.herokuapp.com/v1/post?category="+$scope.filter_mod,{withCredentials:true})
+		$http.get("https://uniclaretiana.herokuapp.com/v1/post?category="+$scope.filter_mod,{withCredentials: true,headers:{'Content-Type': 'application/json; charset=utf-8'}})
         	.success(function(data){
         	limit_post = 5
             $scope.n_post = data
