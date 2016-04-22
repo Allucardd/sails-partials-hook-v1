@@ -32,19 +32,21 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  "/":"HomeController.serve",
+  "/":"LoginController.serve",
+
+  "/profile":"ProfileController.serve",
+
+  "/home":"HomeController.serve",
+
+  "/foro":"ForoController.serve",
 
 	"POST /login":"LoginController.getIn",
 
 	"PUT /login":"LoginController.logOut",
 
-  "/login":"LoginController.serve",
-
-  "/profile":"ProfileController.serve",
-
-  "/foro":"ForoController.serve",
-
   "/gallery":"GalleryController.serve",
+
+	"PUT /v1/user":"UserController.update",
 
   "/v1/user":"UserController.get",
 

@@ -5,7 +5,6 @@ module.exports = function handler_login (query,data) {
   user.findOne(query)
 	  .then(function(docs) {
 	  	if(!docs) return res.notFound({success:false,message:"User not found"});
-
 	  	if(!docs.loginOnce) {
 	  		//just execute once
 	  		if(!data.password) {
@@ -17,7 +16,8 @@ module.exports = function handler_login (query,data) {
 				  	//create session
 				  	_.extend(req.session,{username:docs.username,userId:docs.id,isLogin:true,authenticated:true});
 				  	req.session.save(function(done) {
-				  		res.view("login_once",{username:docs.username});
+				  		console.log("LOGIN ONCE");
+				  		res.json({"login_once":true,username:docs.username});
 				  	});
 				  })
 	  		} else {

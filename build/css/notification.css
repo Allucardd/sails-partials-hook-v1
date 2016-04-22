@@ -1,0 +1,135 @@
+#wrapper-notifications {
+	position: absolute;
+	top: 0px;
+	z-index: 4;
+	width: 400px;
+	margin-top: 35px;
+}
+
+#wrapper-notifications li {
+	background: white;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	list-style: none;
+	padding: 0px;
+	box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.23);
+	border-radius: 5px;
+	animation-name: appear;
+	animation-duration: 2s;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	transition:all 2s;
+	position: relative;
+	opacity:0;
+}
+
+.hide-by-opacity {
+	opacity:0;
+}
+
+
+#wrapper-notifications li a {
+	color: #174DDE;
+	text-decoration: underline;
+}
+
+#wrapper-notifications li .wrap-text {
+	margin: 0px;
+	font-size: 16px;
+	line-height: 1.2;
+	text-align: left;
+}
+#wrapper-notifications li .wrap-notification {
+	position: relative;
+	padding:10px;
+}
+.notification-type-info {
+	background-image: url("/imagenes/information.png");
+	background-size: contain;
+	background-position: center;
+	width: 80px;
+	height: 80px;
+	background-color: #174DDE;
+	display: inline-block;
+	margin-right: 10px;
+	vertical-align: middle;
+	border-radius: 5px;
+}
+
+
+#wrapper-notifications li .wrap-body {
+	display: inline-block;
+	width: 260px;
+	vertical-align: middle;
+	border-left: 1px solid #ccc;
+	padding-left: 10px;
+}
+
+#wrapper-notifications li .wrap-title {
+	margin: 0px;
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 5px;
+	padding-bottom: 3px;
+	display: block;
+	font-size: 18px;
+}
+
+.hide {
+	display:none !important;
+}
+
+.btn-close {
+	position: absolute;
+	top: 16px;
+	right: 7px;
+	border: none;
+	background: none;
+	width: 25px;
+	height: 25px;
+	text-align: center;
+	font-weight: bold;
+	color: #999;
+	cursor: pointer;
+	outline: none;
+	font-size: 17px;
+}
+
+.wrap-text {
+	margin:0px;
+}
+
+.apply-animation-appear {
+	animation-name: appear;
+	animation-duration: 2s;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+}
+
+.apply-animation-disappear {
+	animation-name:disappear;
+	animation-duration: 2s;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+}
+
+@keyframes appear {
+	0% {
+		opacity:0;
+		left:-350px;
+	}
+	100% {
+		opacity:1;
+		left:0px;
+	}
+}
+
+@keyframes disappear {
+	0% {
+		opacity:1;
+		left:0px;
+	}
+	100% {
+		opacity:0;
+		left:-350px;
+	}
+}

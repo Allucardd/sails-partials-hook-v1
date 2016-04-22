@@ -11,6 +11,22 @@
 	background: #25C374 !important;
 }
 
+.wrap-welcome-copy {
+	margin-top: -10px;
+	padding-bottom: 17px;
+	font-size: 16px;
+	font-weight: 100;
+}
+
+.wrap-username {
+	margin-top: 20px;
+	background: #EFAD4D;
+	font-size: 20px;
+	color: white;
+	width: 512px;
+	margin-left: -17px;
+}
+
 .hide {
 	display:none !important;
 }

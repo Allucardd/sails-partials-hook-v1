@@ -3,6 +3,9 @@ const partials = sails.config.globals.partials;
 const scripts = sails.config.globals.scripts;
 
 module.exports = {
+	update:function(req,res) {
+		res.deferUser();
+	},
   get: function (req, res) {
   	user.find()
   			.populate("posts",{

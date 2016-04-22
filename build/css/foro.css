@@ -154,7 +154,7 @@ body {
 	clear: both;
 	padding-right:10px;
 	padding-left:10px;
-	height: 235px;
+	height: 155px;
 }
 
 
@@ -327,6 +327,20 @@ body {
 	margin-left: 10px;
 }
 
+@media screen and (max-width:800px){  
+.section-foro .section-photo {  
+max-width:714px;
+width: 100%; 
+ }  
+}
+
+@media screen and (max-width:600px){  
+.section-foro{  
+border-radius: 0;
+ }  
+}
+
+
 .profile-image {
 	width: 120px;
 	height: 120px;
@@ -349,7 +363,12 @@ body {
 .wrap-options span {
 	cursor:pointer;
 }
-
+@media screen and (min-width:800px){  
+.wrap-options{  
+position: relative;
+top:130px;
+ }  
+}
 .respuesta {
 	margin-bottom: 20px;
 	background: #ddd;
@@ -371,7 +390,13 @@ body {
 	top:0px !important;
 	border-right:1px solid #ADADAD;
 }
-
+@media screen and (max-width:800px){  
+.respuesta .section-photo { 
+border-right:0;  
+border-bottom: 1px solid #ADADAD;
+margin-left: 0px;
+ }  
+}
 
 .container-other-anwers {
 	min-height: 400px;
@@ -400,6 +425,29 @@ body {
 	padding: 10px;
 }
 
+
+@media screen and (min-width:600px){  
+ .wrap-description {  
+ max-width:675px;  
+ }  
+}
+@media screen and (max-width:600px){  
+ .wrap-description {  
+ max-width:337px;  
+ }  
+}
+
+@media screen and (max-width:400px){  
+ .wrap-description {  
+ max-width:288px;  
+ }  
+}
+
+@media screen and (max-width:350px){  
+ .wrap-description {  
+ max-width:228px;  
+ }  
+}
 .banner-image {
 	height: 400px;
 	background-image: url("/imagenes/baner.png");

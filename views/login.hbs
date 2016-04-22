@@ -9,6 +9,7 @@
 	<meta charset="utf-8"/>
 	<script src="js/angular.min.js"></script>
 	<script src="js/underscore-min.js"></script>
+	<script src="/js/sweetalert.min.js"></script> <link rel="stylesheet" type="text/css" href="/css/sweetalert.css">
 
 </head>
 <body>
@@ -17,7 +18,7 @@
 			<div class="wrap-form-login text-center">
 				<img src="imagenes/avata.jpg">
 
-				<form name="formLogin" class="form-login" ng-controller="LoginController" novalidate ng-submit="request_login( formLogin.entryLogin.$valid && formLogin.entryPassword.$valid ? {'username':username,'password':password} : null)">
+				<form name="formLogin" class="form-login" ng-controller="LoginController" novalidate ng-submit="request_login()">
 
 					<span class="label-field">Usuario</span>
 					<input name="entryLogin" ng-trim="false" ng-change="testUsername()" ng-focus="focus_label(onFocus)" class="form-control" ng-model="username" placeholder="Completa este campo">
@@ -29,7 +30,7 @@
 
 					<div class="msg-info wrong-username {[{ username === '' ? 'hide': '' }]} {[{ !nameValid ? '': 'hide' }]}">
 						<i class="material-icons">cancel</i>
-						<span>Escribe un nombre con minimo 3 caracteres sin espacios, en minusculas.</span>
+						<span>Escribe un nombre con minimo 4 caracteres sin espacios, en minusculas.</span>
 					</div>
 
 					<div class="msg-info {[{ username === '' ? '': 'hide' }]}">
@@ -39,7 +40,7 @@
 
 
 					<span class="label-field">Contraseña</span>
-					<input name="entryPassword" placeholder="Completa este campo" type="password" class="form-control" ng-model="password" ng-change="testPassword()">
+					<input name="entryPassword" placeholder="Completa este campo" type="password" class="form-control" ng-model="password" ng-change="testPassword()" id="password">
 
 					<div class="msg-info field-valid {[{ passValid ? '': 'hide' }]}">
 						<i class="material-icons">check_circle</i>
@@ -48,7 +49,7 @@
 
 					<div class="msg-info wrong-username {[{ password === '' ? 'hide': '' }]} {[{ !passValid ? '': 'hide' }]}">
 						<i class="material-icons">cancel</i>
-						<span>Escribe una contraseña con minimo 3 caracteres sin espacios.</span>
+						<span>Escribe una contraseña con minimo 4 caracteres sin espacios.</span>
 					</div>
 
 					<div class="msg-info {[{ password === '' ? '': 'hide' }]}">

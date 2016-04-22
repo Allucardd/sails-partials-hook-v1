@@ -53,7 +53,8 @@ module.exports = {
       via: 'owner'
 		}
 	},//end attributes
-	hashPassword:function(data,next) {
+	beforeCreate:function(data,next) {
+		let self = this;
 		count++
 		console.log(count,"count")
 		bcrypt.hash(data.password,10,function(err,hash) {
@@ -61,21 +62,5 @@ module.exports = {
 			data.password = hash;
 			next();
 		})
-	},
-	generatePass:function (data,next) {
-		data.password = uuid.v4().split("-")[0];
-		next();
-	},
-	beforeValidate:function(data,next) {
-		let self = this;
-		if(data.pass_generated) {
-			self.generatePass(data,next);
-		} else {
-			next();
-		}
-	},
-	beforeCreate:function(data,next) {
-		let self = this;
-		self.hashPassword(data,next);
 	}
 };

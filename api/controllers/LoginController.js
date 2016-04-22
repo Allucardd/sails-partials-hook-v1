@@ -9,7 +9,7 @@ module.exports = {
 		res.deferLogin(query,data);
 	},
 	logOut:function(req,res) {
-		if(!req.session.isLogin) return res.json({message:"user is already log out",success:false});
+		if(!req.session.isLogin) return res.status(403).json({message:"user is already log out",success:false});
 	  req.session.destroy((err)=> err ? res.status(500).json({message:"error when try to log out",success:false}) : res.json({message:"log out done",success:true}));
 	}
 };

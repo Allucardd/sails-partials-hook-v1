@@ -28,40 +28,49 @@
 					<form >
 					  <h2 class="title-form-create-post">Crear nuevo tema</h2>
 						<span class="titulo">Titulo</span>
-						<input type="text" id="text_title">
+						<input type="text" id="text_title" ng-model="newpost.title">
 						<div class="wrong-field hide">
 							<span>Debes completar este campo correctamente</span>
 						</div>
 
 						<span class="titulo">Descripcion</span>
-						<textarea name="" id="text_description" cols="30" rows="8"></textarea>
+						<textarea name="" id="text_description" cols="30" rows="8" ng-model="newpost.description"></textarea>
 						<div class="wrong-field fix-wrong-description hide">
 							<span>Debes completar este campo correctamente</span>
 						</div>
 
-						<select name="" id="text_program">
-							</option value="Trabajo Social">Programa</option>
-							<option value="Trabajo Social">Trabajo Social</option>
-							<option value="Trabajo Social">Trabajo Social</option>
-							<option value="Trabajo Social">Trabajo Social</option>
-							<option value="Trabajo Social">Trabajo Social</option>
+						<select name="" id="text_program" ng-model="newpost.category">
+							<option value="">Programa</option>
+							<option value="trabajo Social">Trabajo Social</option>
+							<option value="psicologia">psicologia</option>
+							<option value="ing-sistemas">ing-sistemas</option>
+							
 						</select>
-						<button class="btn-default_foro" type="submit">Enviar</button>
+						<button class="btn-default_foro" type="submit" ng-click="addpost()">Enviar</button>
 					</form>
 			</div>
 	</article>
 
 
 
-	<article class="article-choose-program">
+	<article class="article-choose-program"><!-- heigth 235 before-->
 		<div class="wrap-title__title-choose-program">
 			<h1 class="title-choose-program">
 				Programa
-				<span class="program-name">Ingenieria de sistemas</span>
+				<span class="program-name">{[{filter_mod}]}</span>
 			</h1>
-		</div>
+			<select name="" id="filter_category" >
+							<option value="">Programa</option>
+							<option value="trabajo Social">Trabajo Social</option>
+							<option value="psicologia">psicologia</option>
+							<option value="ing-sistemas">ing-sistemas</option>
+							
+						</select>
+						<button class="btn-default_foro" type="submit" ng-click="filter_category()" >Filtrar</button>
 
-		<div class="wrap-slider-arrows">
+		</div>
+<!--
+	<div class="wrap-slider-arrows">
 			<div class="left float-left arrow-left"> <i class="material-icons">arrow_back</i> </div>
 			<div class="right float-right arrow-right"> <i class="material-icons">arrow_forward</i> </div>
 		</div>
@@ -119,23 +128,25 @@
 				</li>
 			</ul>
 		</div>
+-->
 	</article>
 
 
-	<article class="section-foro">
-		<div class="wrap-post">
+	<article class="section-foro" ng-repeat="post in posts" ng-model="show_answer" ng-init="show_answer = 0">
+		<div class="wrap-post" >
 			<div class="section-photo post-owner no-margin-left">
 				<div class="profile-image"></div>
 	      <span class="titulo">
-	      	<small>NOMBRE</small>
+	      	<small>{[{ post.owner_username }]}</small>
+	      	<label>{[{ post.category }]}</label>
 	      </span>
 			</div> <!-- end section-photo -->
 
 			<div class="wrap-answers">
-				<span class="titulo">Titulo del post</span>
+				<span class="titulo"> {[{ post.title }]}</span>
 
 				<div class="wrap-description min-height">
-					<p>Description</p>
+					<p>{[{post.description}]}</p>
 				</div>
 				<div class="wrap-options">
 					<span class="titulo line-right">
@@ -149,17 +160,18 @@
 		</div>
 
 
-			<div class="container-other-anwers">
-				<div class="respuesta">
+			<div class="container-other-anwers" >
+				<div class="respuesta" ng-repeat="answer in post.answers.slice(0,show_answer)">
 
 					<div class="section-photo">
 						<div class="profile-image"></div>
 			      <span class="titulo">
-			      	<small>NOMBRE</small>
+			      	<small>{[{answer.username}]}</small>
+
 			      </span>
 					</div> <!-- end section photo1 -->
 
-					<div class="wrap-description push-answer"><p>Respuesta</p></div>
+					<div class="wrap-description push-answer"><p>{[{answer.body}]}</p></div>
 				</div> <!-- end respuesta -->
 
 				<div class="respuesta">
@@ -175,7 +187,7 @@
 				</div> <!-- end respuesta -->
 
 				<div>
-					<button>Ver mas respuestas</button>
+					<button ng-click="view_answers(this)">Ver mas respuestas</button>
 				</div>
 
 			</div> <!-- end container-other-anwers -->
@@ -185,7 +197,7 @@
 
 
 	<div>
-		<button>Carga mas post</button>
+		<button ng-click="view()">Carga mas post</button>
 	</div>
 
 
@@ -197,6 +209,7 @@
 	<script src="js/underscore-min.js"></script>
 	<script src="js/angular.min.js"></script>
 	<script src="js/foro.js"></script>
+
 
 </body>
 </html>
