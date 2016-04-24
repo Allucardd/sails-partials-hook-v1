@@ -21,7 +21,6 @@ module.exports = {
   },
   models:{
     connection: 'someMysqlServer',
-  //  connection: 'localDiskDb',
 	  migrate: "drop"
   },
 	hookTimeout: 120000

@@ -27,10 +27,9 @@ module.exports = {
    ***************************************************************************/
 
   session:{
-  	adapter:"connect-redis",
-	  host: 'pub-redis-16787.us-east-1-3.7.ec2.redislabs.com:16787',
-  	port: 16787,
-   	db: 0,
+  	adapter:"redis",
+	  url: 'redis://pub-redis-16787.us-east-1-3.7.ec2.redislabs.com:16787',
+  	port: 6379,
    	pass: "maxtermax04",
    	prefix: 'sess:'
   },
