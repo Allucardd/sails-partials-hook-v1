@@ -12,7 +12,7 @@ module.exports = function handler_login (query,data) {
 	  		} else if(docs.cc === data.password) {
 		  		docs.loginOnce = true;
 		  		docs.save(function(err) {
-		  			if(err) return res.status(500)({err.success:false,message:"Server error"});
+		  			if(err) return res.status(500).json({err,success:false,message:"Server error"});
 				  	//create session
 				  	_.extend(req.session,{username:docs.username,userId:docs.id,isLogin:true,authenticated:true});
 				  	req.session.save(function(done) {
@@ -25,7 +25,7 @@ module.exports = function handler_login (query,data) {
 	  		}
 	  	}	else {
 		  	bcrypt.compare(data.password,docs.password,function(error,response) {
-		  		if(error) return res.status(500)({error.success:false,message:"Server error"});
+		  		if(error) return res.status(500).json({error,success:false,message:"Server error"});
 		  		if(!response) return res.status(400).json({message:"Bad password",success:false,password:docs.password,candidate:data.password});
 			  	//create session
 		  		_.extend(req.session,{username:docs.username,userId:docs.id,isLogin:true,authenticated:true});
