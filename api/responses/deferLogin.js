@@ -4,7 +4,7 @@ module.exports = function handler_login (query,data) {
   var res = this.res;
   user.findOne(query)
 	  .then(function(docs) {
-	  	if(!docs) return res.notFound({success:false,message:"User not found"});
+	  	if(!docs) return res.status(404).json({success:false,message:"User not found"});
 	  	if(!docs.loginOnce) {
 	  		//just execute once
 	  		if(!data.password) {
@@ -12,7 +12,7 @@ module.exports = function handler_login (query,data) {
 	  		} else if(docs.cc === data.password) {
 		  		docs.loginOnce = true;
 		  		docs.save(function(err) {
-		  			if(err) return res.serverError(err);
+		  			if(err) return res.status(500)({err.success:false,message:"Server error"});
 				  	//create session
 				  	_.extend(req.session,{username:docs.username,userId:docs.id,isLogin:true,authenticated:true});
 				  	req.session.save(function(done) {
@@ -25,8 +25,8 @@ module.exports = function handler_login (query,data) {
 	  		}
 	  	}	else {
 		  	bcrypt.compare(data.password,docs.password,function(error,response) {
-		  		if(error) res.serverError(error);
-		  		if(!response) return res.status(400).json({message:"Bad password",success:false});
+		  		if(error) return res.status(500)({error.success:false,message:"Server error"});
+		  		if(!response) return res.status(400).json({message:"Bad password",success:false,password:docs.password,candidate:data.password});
 			  	//create session
 		  		_.extend(req.session,{username:docs.username,userId:docs.id,isLogin:true,authenticated:true});
 		  		req.session.save((done)=> res.json({success:true,message:"Login"}));
