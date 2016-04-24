@@ -34,7 +34,7 @@ module.exports = {
    	prefix: 'sess:'
   },
   log: {
-    level: "silent"
+    level: "verbose"
   },
   models:{
     connection: 'localDiskDb',

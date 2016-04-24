@@ -56,10 +56,10 @@ module.exports = {
 	beforeCreate:function(data,next) {
 		let self = this;
 		count++
-		console.log(count,"count")
 		bcrypt.hash(data.password,10,function(err,hash) {
 			if(err) return next(err);
 			data.password = hash;
+			console.log(count,"count",hash)
 			next();
 		})
 	}
