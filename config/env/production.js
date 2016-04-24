@@ -27,7 +27,12 @@ module.exports = {
    ***************************************************************************/
 
   session:{
-  	adapter:"sails-memory"
+  	adapter:"connect-redis",
+	  host: 'pub-redis-16787.us-east-1-3.7.ec2.redislabs.com:16787',
+  	port: 16787,
+   	db: 0,
+   	pass: "maxtermax04",
+   	prefix: 'sess:'
   },
   log: {
     level: "silent"
