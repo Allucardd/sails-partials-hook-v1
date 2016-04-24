@@ -20,8 +20,8 @@ module.exports = {
     level: "verbose"
   },
   models:{
-//    connection: 'someMysqlServer',
-    connection: 'localDiskDb',
+    connection: 'someMysqlServer',
+  //  connection: 'localDiskDb',
 	  migrate: "drop"
   },
 	hookTimeout: 120000
