@@ -16,6 +16,7 @@
     "sails-disk": "~0.10.9",
     "sails-fixtures": "^1.0.8",
     "sails-hook-fixtures": "^0.11.9",
+    "sails-memory": "^0.10.6",
     "sails-mysql": "^0.12.1",
     "underscore": "^1.8.3"
   },
