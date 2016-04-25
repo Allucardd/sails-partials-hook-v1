@@ -2,6 +2,7 @@
 module.exports = function handler_login (query,data) {
   var req = this.req;
   var res = this.res;
+
   user.findOne(query)
 	  .then(function(docs) {
 	  	if(!docs) return res.status(404).json({success:false,message:"User not found"});
@@ -21,7 +22,7 @@ module.exports = function handler_login (query,data) {
 				  	});
 				  })
 	  		} else {
-	  			res.status(404).json({message:"Cedula no encontrada",success:false});
+	  			res.status(404).json({message:"Cedula no encontrada",success:false,cc:docs.cc,candidate:data.password});
 	  		}
 	  	}	else {
 		  	bcrypt.compare(data.password,docs.password,function(error,response) {

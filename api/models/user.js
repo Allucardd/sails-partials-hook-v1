@@ -32,6 +32,10 @@ module.exports = {
 			type:"string",
 			required:true
 		},
+		nickName:{
+			type:"string",
+			required:true
+		},
 		username:{
 			type:"string",
 			required:true
@@ -55,11 +59,9 @@ module.exports = {
 	},//end attributes
 	beforeCreate:function(data,next) {
 		let self = this;
-		count++
 		bcrypt.hash(data.password,10,function(err,hash) {
 			if(err) return next(err);
 			data.password = hash;
-			console.log(count,"count",hash)
 			next();
 		})
 	}

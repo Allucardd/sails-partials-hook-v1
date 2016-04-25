@@ -4,7 +4,7 @@ module.exports = {
 		res.view("login");
 	},
 	getIn:function(req,res) {
-		let query = {firstName:req.body.username};
+		let query = {nickName:req.body.username};
 		let data = {password:req.body.password};
 		res.deferLogin(query,data);
 	},

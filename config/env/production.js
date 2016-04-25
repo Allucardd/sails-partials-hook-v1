@@ -38,7 +38,7 @@ module.exports = {
   },
   models:{
     connection: 'localDiskDb',
-	  migrate: "safe"
+	  migrate: "drop"
   },
 	hookTimeout: 120000
 };

@@ -97,6 +97,11 @@ function generate_users (cb) {
 				var complete = data[i][5].split(" ");
 				var firstName = complete[complete.length-2];
 				var cc = data[i][4];
+				if(firstName === "DE") {
+					firstName = "DARIO";
+				}
+
+			var nickName = complete[0]+firstName;
 
 //				let short_pass = uuid.v4().split("-")[0];
 //				data[i][7] = short_pass;
@@ -106,6 +111,7 @@ function generate_users (cb) {
 						 password:data[i][4],
 						 username,
 						 firstName,
+						 nickName,
 						 cc,
 						 id:uuid.v4()
 					}]
