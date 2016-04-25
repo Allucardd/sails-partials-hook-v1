@@ -16,10 +16,10 @@ module.exports.bootstrap = function(next) {
   /*
   */
   /*
-  */
 	 fixtures.init({
 	    'dir':'./fixtures',
 	    'pattern':'*.json' // Default is '*.json'
 	  }, next);
- // next();
+  */
+ 	next();
 };

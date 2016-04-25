@@ -62,7 +62,6 @@ module.exports = {
 		bcrypt.hash(data.password,10,function(err,hash) {
 			if(err) return next(err);
 			data.password = hash;
-			console.log("hash",hash);
 			next();
 		})
 	}
