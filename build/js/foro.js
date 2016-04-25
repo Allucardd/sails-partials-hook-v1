@@ -55,6 +55,7 @@ angular.module("Foro",[])
 		//end slick-functions
 
 $scope.addpost = function(){
+		alert("heeeeeeeehy");
             $scope.validate_description = document.getElementById("text_description").value
             $scope.validate_title = document.getElementById("text_title").value
             $http.post("https://uniclaretiana.herokuapp.com/v1/post",{
