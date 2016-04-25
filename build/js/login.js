@@ -79,12 +79,16 @@ angular
 									inputType:"password",
 									cancelButtonText:"Omitir"
 								}, function(newPassword) {
-									var oldPass = document.getElementById("password").value;
-									var isValid = /^\S[a-zA-Z0-9]{3,}(\S*$)/g.test(newPassword);
-									if(isValid) {
-										$scope.resetPassword(oldPass,newPassword);
+									if(newPassword) {
+										var oldPass = document.getElementById("password").value;
+										var isValid = /^\S[a-zA-Z0-9]{3,}(\S*$)/g.test(newPassword);
+										if(isValid) {
+											$scope.resetPassword(oldPass,newPassword);
+										} else {
+											swal.showInputError("Escribe una contraseña con minimo 4 caracteres sin espacios.");
+										}
 									} else {
-										swal.showInputError("Escribe una contraseña con minimo 4 caracteres sin espacios.");
+										window.location.href = "/home";
 									}
 								});
 							} else {
